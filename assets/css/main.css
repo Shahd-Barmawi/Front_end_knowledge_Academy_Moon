@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primaryColor: #19213d;
+    --primaryFont: 'Inter';
+    --spacer: 4px;
+}
+
 /*class that contains the row layout
 لانه العناصر جايين حد بعض فهاد دايما بنستدعيه وقت هيك اشي*/
 .row {
@@ -33,14 +39,34 @@
 
 .list a {
     text-decoration: none;
-    color: black;
+    color: var(--primaryColor);
     font-size: 14px;
+    font-family: var(--primaryFont);
 }
 
 .icons ul {
     display: flex;
-    gap: 24px;
+    gap: calc(var(--spacer)*6);
     list-style: none;
+}
+
+.menu {
+    display: none;
+}
+
+@media screen and (min-width:0) and (max-width: 996px) {
+    .list {
+        display: none;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+    }
+
 }
 
 .collection_section {
@@ -61,3 +87,37 @@ img {
 .collection h2 {
     margin-top: 23px;
 }
+
+@media screen and (min-width:0) and (max-width: 400px) {
+    .collection_section .row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .collection {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:401px) and (max-width: 770px) {
+    .collection {
+        width: calc((100% - 30px) / 2);
+    }
+}
+
+@media screen and (min-width:771px) and (max-width: 900px) {
+    .collection {
+        width: calc((100% - 60px) / 3);
+    }
+
+}
+
+/* text-transform: capitalize;*/
+/* make the first letter of each word uppercase */
+/* --------------------------------------------- */
+/* text-transform: uppercase; */
+/* make all letters uppercase */
+/* --------------------------------------------- */
+/* text-transform: lowercase; */
+/* make all letters lowercase */
+/* --------------------------------------------- */
