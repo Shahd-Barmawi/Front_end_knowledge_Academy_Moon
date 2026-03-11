@@ -4,19 +4,37 @@
     box-sizing: border-box;
 }
 
-.header {
+/*class that contains the row layout
+لانه العناصر جايين حد بعض فهاد دايما بنستدعيه وقت هيك اشي*/
+.row {
     display: flex;
-    gap: 232.5px;
+    justify-content: space-between;
+    /* دائما بتعمل للابناء تاع هاد الاشي*/
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: calc(100% - 330px);
+    /*100% (- 165px (left margin) - 165px (right margin))*/
+    margin: 0 auto;
+}
+
+.header {
     padding: 21.84px 0;
     /*up & down=21.84px  left & right=0*/
-    margin: 0 165px;
 }
 
 .list ul {
     display: flex;
     gap: 60px;
     list-style: none;
+}
+
+.list a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
 }
 
 .icons ul {
@@ -26,13 +44,10 @@
 }
 
 .collection_section {
-    display: flex;
-    flex-wrap: wrap;
     gap: 30px;
-    text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
-    margin: 0 165px;
+    text-align: center;
 }
 
 .collection {
