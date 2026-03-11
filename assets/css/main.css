@@ -85,10 +85,16 @@ img {
 }
 
 .collection h2 {
-    margin-top: 23px;
+    margin: 10px 0;
+    font-size: 24px;
 }
 
-@media screen and (min-width:0) and (max-width: 400px) {
+
+@media screen and (min-width:0) and (max-width: 621px) {
+    .container {
+        width: calc(100% - 100px);
+    }
+
     .collection_section .row {
         flex-direction: column;
         gap: 20px;
@@ -99,15 +105,19 @@ img {
     }
 }
 
-@media screen and (min-width:401px) and (max-width: 770px) {
+@media screen and (min-width:622px) and (max-width:756px) {
     .collection {
         width: calc((100% - 30px) / 2);
     }
 }
 
-@media screen and (min-width:771px) and (max-width: 900px) {
+@media screen and (min-width:757px) and (max-width:900px) {
     .collection {
         width: calc((100% - 60px) / 3);
+    }
+
+    .collection h2 {
+        font-size: 16px;
     }
 
 }
