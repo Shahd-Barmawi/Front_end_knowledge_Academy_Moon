@@ -10,6 +10,19 @@
     --spacer: 4px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "EB Garamond", serif;
+}
+
+body {
+    font-family: var(--primaryFont);
+}
+
 /*class that contains the row layout
 لانه العناصر جايين حد بعض فهاد دايما بنستدعيه وقت هيك اشي*/
 .row {
@@ -26,6 +39,7 @@
     margin: 0 auto;
 }
 
+/*Start of header section*/
 .header {
     padding: 21.84px 0;
     /*up & down=21.84px  left & right=0*/
@@ -69,6 +83,8 @@
 
 }
 
+/*End of header section*/
+/*Start of .collection_section*/
 .collection_section {
     gap: 30px;
     padding-top: 40px;
@@ -88,7 +104,6 @@ img {
     margin: 10px 0;
     font-size: 24px;
 }
-
 
 @media screen and (min-width:0) and (max-width: 621px) {
     .container {
@@ -119,8 +134,91 @@ img {
     .collection h2 {
         font-size: 16px;
     }
+}
+
+/*End of .collection_section*/
+/*Start of .best_sellers section */
+.best_sellers {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.best_sellers .item {
+    text-align: left;
+    width: calc((100% - 90px) / 4);
+    margin-bottom: 10px;
 
 }
+
+.best_sellers h2 {
+    margin-bottom: 48px;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.best_sellers .item-content {
+    margin-top: 24px;
+}
+
+.best_sellers h3 {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.best_sellers .price {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.best_sellers .description {
+    color: #807F86;
+    width: 80%;
+    line-height: 22px;
+    margin-top: 24px;
+    margin-bottom: 34px;
+}
+
+.best_sellers .add-to-card {
+    padding: 15px 8px;
+    background-color: white;
+    border: 1px solid var(--primaryColor);
+    color: var(--primaryColor);
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 450;
+    width: 100%;
+}
+
+@media screen and (min-width:0) and (max-width: 430px) {
+    .container {
+        width: calc(100% - 100px);
+    }
+
+    .best_sellers .item {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:431px) and (max-width:768px) {
+
+    .best_sellers .item {
+        width: calc((100% - 30px) / 2);
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+    .best_sellers .item {
+        width: calc((100% - 60px) / 3);
+    }
+}
+
+
+
+/* End of .best_sellers section */
 
 /* text-transform: capitalize;*/
 /* make the first letter of each word uppercase */
